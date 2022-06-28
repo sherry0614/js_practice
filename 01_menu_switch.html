@@ -26,8 +26,12 @@
     </nav>
 <!-- 等到html都讀完才執行 -->
     <script>
-        document.getElementById('btn-nav-toggle').addEventListener('click',openNav)
-// 函式名稱
+        let btnNavToggle = document.getElementById('btn-nav-toggle')
+        let primaryNavigation = document.getElementById('primary-navigation')
+
+        btnNavToggle.addEventListener('click',openNav)
+        // 函式名稱
+        // document.getElementById('btn-nav-toggle').addEventListener('click',openNav)
         function openNav(){
             console.log('點安鈕打開主導覽')
             

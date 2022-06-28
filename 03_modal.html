@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .modal-wrapper{
+            position: fixed;
+            background-color: rgba(101, 46, 46, 0.911);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* display: none; */
+        }
+        .modal-wrapper.active{
+            display: block;
+        }
+        .modal-content{
+            position: absolute;
+            width: 80%;
+            max-width: 600px;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: rgb(231, 207, 207);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .btn-close{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="javacript:";onclick="openModal()";id="open-modal">打開蓋板</a>
+    <div class="modal-wrapper">
+        <div class="modal-content">
+            <div id="btn-close-swith" class="btn-close">x</div>
+            廣告區塊
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+<p>01</p>
+<p>02</p>
+<p>03</p>
+<p>04</p>
+<p>05</p>
+<p>06</p>
+<p>07</p>
+<p>08</p>
+    <script>
+
+
+    </script>
+</body>
+</html>

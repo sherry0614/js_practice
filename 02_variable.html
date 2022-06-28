@@ -30,9 +30,120 @@
         console.log(account)
         console.log(birthday)
         //字串相加
-        console.log('姓名:'+name)
-        console.log(x+y)
+        console.log('我的姓名是:'+name+'今天是:'+birthday)
+        //模板字串符
+        console.log(`我的名子是${name}，今天是${birthday}`)
         //alert('彈出視窗')
+
+        let age = 18
+
+        if(age>=18){
+            console.log(`年齡為${age}，可以喝酒`)
+        }else{
+            console.log(`年齡為${age}，不可以喝酒`)
+        }//if age end
+
+        let accounta ='sherry'
+        let password ='123456'
+        if(accounta=='sherry'&& password=='123456'){
+            console.log('成功登入')
+        }else{
+            console.log('帳號或密碼錯誤，請重新輸入')
+        }//if account password end
+
+        let area='台北'
+         if(age<=12||area=='台北')
+        {
+            console.log('優待票180元')
+        }else{
+            console.log('一般遊客200元')
+        }//if ticket end
+
+
+        let day = new Date()
+        let weekday= day.getDay()
+        if(weekday == 1){
+            console.log('今天是星期一')
+        }else if(weekday == 2) {
+            console.log('今天是星期二')
+        }else if(weekday == 3) {
+            console.log('今天是星期三')
+        }else if(weekday == 4) {
+            console.log('今天是星期四')
+        }else if(weekday == 5) {
+            console.log('今天是星期五')
+        }else if(weekday == 6) {
+            console.log('今天是星期六')
+        }else if(weekday == 0) {
+            console.log('今天是星期日')
+        }//if day end
+        
+        let numa = 0
+        // numa = 0
+        // console.log(numa)   
+        // //迴圈
+        // numa=numa+1
+        // numa++//變數累加
+        // console.log(numa)
+
+        while (numa < 10){
+            numa = numa + 1
+            console.log(numa)
+        }
+        //for迴圈
+        for(let numb=0; numb < 10; numb++){
+            console.log('數字',numb)
+        }//for numb end
+
+        //for(定義numb;當numb大於0的時候;numb累減1)     
+        for(let numb=5; numb > 0; numb--){
+            console.log('數字遞減',numb)
+        }//for numb(for裡的變數獨立的不會互相影響) end
+        //陣列
+        let students = ['1號','2號','3號','4號','5號']
+        console.log(students[0])
+        console.log(students[1])
+        console.log(students[2])
+        console.log(students[3])
+        console.log(students[4])
+
+        console.log('名單人數量',students.length)
+
+        for(let i=0;i< students.length;i++){
+            // console.log('學號'+(i+1)+'學員名'+students[i])
+            console.log(`學號${i+1},學員名稱:${students[i]}`)
+            // console.log('學號',(i+1),' 學員名稱:',students[i])
+        }//for end
+
+        let pet ={
+            name:'小白',
+            age:3,
+            color:'white',
+            bark:function(){
+                alert('汪')
+            }//bark end
+
+        }//pet end
+        console.log(pet.name)//點記法
+        console.log(pet['name'])//括弧技法
+        //pet.bark()
+        //pet['bark']()
+
+        let user ={
+            name:'sherry',
+            account:'sherry0628',
+            password:'123456',
+            mobile:'0922000000',
+            address:'彰化',
+        }
+
+        console.log(user.name)
+
+
+
+
+
+
     </script>
 </body>
 </html>
