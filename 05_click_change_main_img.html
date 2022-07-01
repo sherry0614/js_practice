@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_click_change_main_img</title>
+    <style>
+        .container {
+            margin: auto;
+            width: 80%;
+            max-width: 1140px;
+        }
+        
+        .img-fluid{
+            width: 10%;
+        }
+        .main-img{
+            margin-bottom: 10px;}
+
+        .thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnails>img {
+            width: 100px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #fff;
+            cursor: pointer;
+            
+        }
+        .thumbnails>img.active{
+
+            border: 2px solid rgb(160, 33, 33);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="main-img"><img class="img-fluid" src="images\IMG_8764.JPG" alt=""></div>
+
+        <div class="thumbnails">
+            <img class="active" src="images\IMG_8777.JPG" alt="">
+            <img class="" src="images\IMG_8791.JPG" alt="">
+            <img class="" src="images\IMG_9871.JPG" alt="">
+            <img class="" src="images\IMG_9871.JPG" alt="">
+        </div>
+    </div>
+    <!-- jquery 主程式 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- 自定義 -->
+    <script>
+        $('.thumbnails>img').on('click', function (e) {
+            // console.log(e.target)
+            // 主圖src屬性(attribute) 替換成 當前點擊縮圖的src
+            $('.main-img>img').attr('src',$(this).aettr('src'))
+
+            $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+
+
+        } )//.thumbnails>img end
+    </script>
+</body>
+
+</html>

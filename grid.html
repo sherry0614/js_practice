@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* float */
+        .container{
+            /* width: 95%; */
+            /* max-width: 500px; */
+            margin: auto;
+            display: grid;
+            /* 依照底下區塊個數排成三欄 */
+            /* target-start target-end */
+            grid-template-columns: 100px 100px 100px 100px;
+            /* grid-template-columns: 100px 1fr 2fr; */
+            /*  */
+            /* grid-template-rows: 100px 100px 100px 100px; */
+            /* grid-auto-columns: 100px; */
+            /* 維持寬度，補間距 */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+
+            /* gap 間距 */
+            gap: 10px
+        }
+        .box1{
+            background-color: red;
+            /* 改變欄指定到第幾欄 */
+            /* grid-column: 2; */
+            /* 改變列指定到第幾列 */
+            /* grid-row:2; */
+            /* 欄位合併儲存格 */
+            /* grid-column: 1 / 4; */
+            /* grid-column: 2 / -1; */
+            /* grid-column: 2 / span 2; */
+            grid-column:1 / span 2;
+            grid-row:1 / span 2;
+        }
+        .box2{
+            background-color: orange;
+        }
+        .box3{
+            background-color: yellow;
+            /* grid-column: 2 / 4; */
+            /* grid-column: 2 / -1; */
+            
+        }
+        .box4{
+            background-color: green;
+        }
+        .box5{
+            background-color: blue;
+        }
+        .box6{
+            background-color: lightblue;
+        }
+        .box7{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">01</div>
+        <div class="box2">02</div>
+        <div class="box3">03</div>
+        <div class="box4">04</div>
+        <div class="box5">05</div>
+        <!-- <div class="box6">06</div> -->
+        <!-- <div class="box7">07</div> -->
+    </div>
+</body>
+</html>

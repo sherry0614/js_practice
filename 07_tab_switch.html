@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_tab_switch</title>
+    <style>
+        .tab-link{
+            display: flex;
+        }
+        .tab-link>a{
+            text-decoration: none;
+            width: 23%;
+            margin:1%;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color:#685252;
+            display: block;
+            background-color: rgb(255, 202, 202);
+            border-radius: 30px 30px 0px 0px;
+        }
+        .tab-link>a.active{
+            background-color: rgb(157, 60, 60);
+            color: rgb(255, 240, 240);
+            text-decoration: underline ;
+
+        }
+        .tab-content{
+            display: none;
+        }
+        .tab-content.active{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .tab-link>a[href="#tab$"]*3 -->
+    <!-- #tab${內容}*3 -->
+    <div class="tab-link">
+        <a href="#tab1" class="active">熱門產品</a>
+        <a href="#tab2">最新產品</a>
+        <a href="#tab3">季節限定</a>
+        <a href="#tab3">全部產品</a>
+    </div>
+    
+    <div id="tab1" class="tab-content active">內容1</div>
+    <div id="tab2" class="tab-content">內容2</div>
+    <div id="tab3" class="tab-content">內容3</div>
+
+
+    <!-- jquery主程式 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- 自定義 -->
+    <script>
+        $('.tab-link>a').on('click',function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+            console.log($(this).attr('href'))
+            $( $(this).attr('href') ).addClass('active')
+            $( $(this).attr('href') ).siblings().removeClass('active')
+        })//tab-link>a end
+
+    </script>
+</body>
+
+</html>

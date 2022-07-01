@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* box model 盒子模型*/
+            box-sizing: border-box;
+        }
+        .container-child-float>a{
+            background-color: lightblue;
+            width: 100px;
+            height:100px;
+            margin-bottom: 10px;
+            /* padding-bottom: 10px; */
+            /* 行內元素 */
+            /* display:inline; */
+            /* 行內塊級元素 */
+            /* display: inline-block; */
+            /* 塊級元素 */
+            display: block;
+        }
+        .container-child-float{
+            width: 95%;
+            max-width: 900px;
+            margin: auto;
+            background-color: green;
+            overflow: hidden;
+        }
+        .container-child-float>a{
+            float: left;
+            margin-right: 2%;
+            width: 23.5%;
+        }
+        .container-child-float>.mr0px{
+           margin-right: 0; 
+        }
+
+        .container-display-flex{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
+            background-color: green;
+        }
+
+        .container-display-flex>a{
+                display: block;
+                width: 50%;
+                height: 100px;
+                border:2px solid black;
+                /* margin: 10px; */
+                background-color: orange;
+        }
+        @media (min-width:768px) {
+            .container-display-flex>a{
+                width: 25%;
+            }
+        } /* min-width:768px */
+        .bg-tomato{
+            /* background-color: tomato; */
+            background-image: url('public/images/newbanner.jpg');
+            background-size: auto 100%;
+        }
+        @media (min-width:560px){
+            .bg-tomato{
+                background-size: 100% auto;
+            }
+        }
+        .pt-1{
+            padding-top: 1em; 
+        }
+        .pt-2{
+            padding-top: 2em;
+        }
+        .pt-5{
+            padding-top: 5em;
+        }
+        .pb-2{
+            padding-bottom: 2em;
+        }
+        .pb-5{
+            padding-bottom: 5em;
+        }
+        .mb-5{
+            margin-bottom: 5em;
+        }
+        .container-display-flex-nowrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .container-display-flex-nowrap>nav{
+            width: 100%;
+            background-color: lightblue;
+        }
+        .logo{
+            background-color: green;
+        }
+        .icon-menu{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>float 排版/ 塊級元素</h1>
+    <!-- .container start -->
+    <div class="container-child-float">
+        <a href="javascript:;">01</a>
+        <a href="javascript:;">02</a>
+        <a href="javascript:;">03</a>
+        <a class="mr0px" href="javascript:;">04</a>
+        <a href="javascript:;">05</a>
+        <a href="javascript:;">06</a>
+    </div>
+    <h1>flex 排版 / 子元素寫固定百分比 / 針對裝置設定不同顯示欄位數 / 子元素塊級元素</h1>
+    <!-- .container end -->
+    <div class="bg-tomato pt-5 pb-5 mb-5">
+        <div class="container-display-flex ">
+            <a href="javascript:;">01</a>
+            <a href="javascript:;">02</a>
+            <a href="javascript:;">03</a>
+            <a href="javascript:;">04</a>
+            <a href="javascript:;">05</a>
+            <a href="javascript:;">06</a>
+            <a href="javascript:;">07</a>
+        </div>
+    </div>
+
+    <div class="container-display-flex-nowrap">
+        <a href="" class="logo">Logo</a>
+        <a href="" class="icon-menu">menu</a>
+        <nav>
+            <ul>
+                <li><a href="">01</a></li>
+                <li><a href="">02</a></li>
+                <li><a href="">03</a></li>
+                <li><a href="">04</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

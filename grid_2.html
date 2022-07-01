@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding-bottom:75%;
+            margin-bottom: 20px;
+        }
+    
+        @media (min-width: 768px) {
+            .box{
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+            .container{
+                margin: auto;
+                max-width: 900px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 100px);
+                grid-template-areas: 
+                "r y y y y"
+                "r y y y y"
+                "c c o g g"
+                "c c . g g"
+                "c c b b b"
+                ;
+                gap:10px;
+            }
+        }
+
+        .box1{
+            background-color: red;
+            grid-area: r;
+            background-image: url('public/images/shiitake1.jpg');
+            background-size: auto 100%;
+        }
+        .box2{
+            background-color: orange;
+            grid-area: o;
+            background-image: url('public/images/shiitake2.jpg');
+            background-size: 100%;
+
+        }
+        .box3{
+            background-color: yellow;
+            grid-area: y;
+            background-image: url('public/images/shiitake3.jpg');
+            background-size: 100%;
+        }
+        .box4{
+            background-color: green;
+            grid-area: g;
+            background-image: url('public/images/shiitake4.jpg');
+            background-size: 100%;
+        }
+        .box5{
+            background-color: blue;
+            grid-area: b;
+        }
+        .box6{
+            background-color: lightblue;
+            grid-area: c;
+        }
+        .box7{
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">01</div>
+        <div class="box box2">02</div>
+        <div class="box box3">03</div>
+        <div class="box box4">04</div>
+        <div class="box box5">05</div>
+        <div class="box box6">06</div>
+        <div class="box box7"></div>
+    </div>
+</body>
+</html>
